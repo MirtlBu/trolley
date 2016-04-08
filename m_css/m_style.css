@@ -1,0 +1,331 @@
+/*.m_block1 div, .m_block2 div {
+    font-family: Arial, sans-serif !important;
+}*/
+
+.m_block1 {
+    font-size: 0;
+    height: 350px;
+    background-color: #e3edf2;
+}
+
+.m_block1 .header__left {
+    width: 48%;
+}
+
+.m_block1 .header__right {
+    width: 52%;
+}
+
+.m_block1 .header__left, .m_block1 .header__right {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.m_block1 .header__right {
+    height: 350px;
+    background-image: url(../m_img/m_trolley.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 350px;
+}
+
+.m_block1 .header__logo {
+    margin: 0 0 25px 7px;
+}
+
+.m_block1 .logo__img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.m_block1 .logo__img {
+    margin-right: 2px;
+}
+
+.m_block1 .header__description {
+    margin-left: 36px;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #0095da;
+}
+
+.m_block1 .vertical-center {
+    margin-left: 40px;
+    position: relative;
+    top: 45%;
+    transform: translateY(30%);
+}
+
+.m_block2 .m_content {
+    font-size: 0;
+    height: 870px;
+    overflow-Y: hidden;
+}
+
+.m_block2 .m_content .sidebar, .m_block2 .m_content .main {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.m_block2 .m_content .sidebar {
+    width: 300px;
+    height: 100%;
+    padding: 45px 20px 25px 20px;
+    box-sizing: border-box;
+    background-color: #185b7a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.m_block2 .m_content .siderbar__header {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.m_block2 .m_content .sidebar__title {
+    margin-bottom: 5px;
+}
+
+.m_block2 .m_content .sidebar__text {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.m_block2 .m_content a {
+    color: #6fd1ff;
+    font-size: 16px;
+    opacity: .8;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.m_block2 .m_content a:hover {
+    opacity: 1;
+}
+
+.m_block2 .m_content .siderbar__text {
+    font-size: 14px;
+
+}
+
+.m_block2 .m_content .sidebar__article {
+    margin-bottom: 33px;
+}
+
+.m_block2 .m_content .sidebar__control {
+    width: 34px;
+    height: 31px;
+    padding: 5px;
+    margin: 90px auto 0 auto;
+    background-image: url(../m_img/m_arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.m_block2 .m_content .main {
+    width: 670px;
+    padding: 45px 0 25px 30px;
+    box-sizing: border-box;
+}
+
+.m_block2 .m_content .main__title {
+    font-weight: bold;
+}
+
+.m_block2 .m_content .main__info {
+    font-size: 0;
+    margin-bottom: 65px;
+}
+
+.m_block2 .m_content .main__left, .m_block2 .m_content .main__right {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.m_block2 .m_content .main__left {
+    width: 445px;
+}
+
+.m_block2 .m_content .main__right {
+    width: 185px;
+    float: right;
+    margin-right: -15px;
+    font-size: 14px;
+}
+
+.m_block2 .m_content .main__left .main__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.m_block2 .m_content .main__left .main__text {
+    line-height: 24px;
+}
+
+.m_block2 .m_content .main__right .main__title {
+    line-height: 16px;
+}
+
+.m_block2 .m_content .main__right .main__text {
+    line-height: 19px;
+}
+
+.m_block2 .m_content .main__player {
+    position: relative;
+    padding: 15px 20px 0 20px;
+    box-sizing: border-box;
+    background-color: #d9eff9;
+    min-height: 120px;
+    margin-bottom: 25px;
+}
+
+.m_block2 .m_content .player__navs {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+}
+
+.m_block2 .m_content .player__nav {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    padding-bottom: 13px;
+    font-size: 13px;
+    color: #0095da;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.m_block2 .m_content .player__nav:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    right: 0;
+    width: 100%;
+    padding: 0 2px;
+    height: 12px;
+    background-color: #0095da;
+    transition: background .2s;
+}
+
+.jouele-wrap {
+    position: absolute;
+    width: 100%;
+    top: -40px;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.jouele-control-text {
+    padding-top: 2px;
+}
+
+.m_block2 .m_content .player__nav:hover {
+    color: #ed1c24;
+}
+
+.m_block2 .m_content .player__nav:hover:after {
+    background-color: #ed1c24;
+}
+
+.m_block2 .m_content .main__player .main__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.m_block2 {
+    position: relative;
+    width: 100%;
+    overflow-X: hidden;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.m_block2 .m_content .map__wrapper {
+    width: 660px;
+    margin-left: 30px;
+}
+
+.m_block2 .m_content .main__map {
+    position: absolute;
+    width: 100%;
+    min-height: 389px;
+    background-color: #e3edf2;
+    margin-left: -30px;
+}
+
+.m_block2 .m_content .map__bar {
+    position: relative;
+    height: 45px;
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 10;
+}
+
+.m_block2 .m_content .main__map .main__title {
+    font-size: 20px;
+}
+
+.m_block2 .m_content .map__link {
+    color: #0095da;
+}
+
+.m_block2 .m_content .main__map .main__title, .m_block2 .m_content .map__link-wrapper {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 45px;
+}
+
+.m_block2 .m_content .map__link-wrapper {
+    text-align: right;
+}
+
+.m_block2 .m_content .map__baloon {
+    position: relative;
+    width: 295px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: #0095da;
+    color: #fff;
+    z-index: 0;
+}
+
+.m_block2 .m_content .map__baloon > div {
+    z-index: 10;
+}
+
+.m_block2 .m_content .map__baloon:after {
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 52px;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url(../m_img/m_pin.png);
+    z-index: -1;
+}
+
+#hmenu {
+    position: relative !important;
+    margin: 0 !important;
+}
+
+#hmenu li {
+    text-transform: uppercase;
+}
