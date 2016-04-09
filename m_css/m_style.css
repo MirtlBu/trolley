@@ -60,7 +60,6 @@
 .m_block2 .m_content {
     font-size: 0;
     height: 870px;
-    overflow-Y: hidden;
 }
 
 .m_block2 .m_content .sidebar, .m_block2 .m_content .main {
@@ -77,6 +76,7 @@
     background-color: #185b7a;
     font-size: 16px;
     color: #fff;
+    overflow: hidden;
 }
 
 .m_block2 .m_content .siderbar__header {
@@ -114,15 +114,39 @@
     margin-bottom: 33px;
 }
 
+.m_block2 .m_content .sidebar {
+    position: relative;
+}
+
+.m_block2 .m_content .sidebar__content {
+    height: 100%;
+    overflow-Y: scroll;
+}
+
 .m_block2 .m_content .sidebar__control {
-    width: 34px;
-    height: 31px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
     padding: 5px;
-    margin: 90px auto 0 auto;
+    box-sizing: border-box;
+    background-color: #185b7a;
     background-image: url(../m_img/m_arrow-down.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+
+.m_block2 .m_content .sidebar__control--up {
+    top: 20px;
+    transform: rotate(180deg);
+    display: none;
+}
+
+.m_block2 .m_content .sidebar__control--down {
+    bottom: 0;
 }
 
 .m_block2 .m_content .main {
