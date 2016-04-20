@@ -150,9 +150,9 @@
 
 #trolleybus .tip {
     position: absolute;
-    left: -595px;
-    width: 590px;
-    margin: -41px 0 50px 0;
+    left: 0;
+    width: 90%;
+    margin: 0 auto 50px auto;
     padding: 10px 40px;
     background-color: #e7f4f9;
     border: 1px solid #009fe3;
@@ -181,6 +181,7 @@
     width: 30px;
     height: 1px;
     background-color: #009fe3;
+    display: none;
 }
 
 #trolleybus .tip .close:hover {
@@ -206,5 +207,15 @@
 
     #trolleybus .rightbar {
         text-align: right;
+    }
+
+    #trolleybus .tip {
+        left: -595px;
+        width: 590px;
+        margin: -41px 0 50px 0;
+    }
+
+    #trolleybus .tip:after {
+        display: block;
     }
 }
