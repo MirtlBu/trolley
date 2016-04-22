@@ -57,8 +57,14 @@
 
 		<style>
 			header.header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
 				height: 50px;
-				background: #f4f4f4;
+				background: rgba(255, 255,255, .8);
+                padding: 10px 0;
 			}
 
 			header.header img {
@@ -68,6 +74,37 @@
 			body {
 				background: #f4f4f4;
 			}
+
+            .wrapper {
+                width: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+
+            @media screen and (min-width: 1000px) {
+                .wrapper {
+                    width: 970px;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .footer__text, .footer__button {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 16px;
+                }
+
+                .footer__text {
+                    width: 60%;
+                }
+
+                .footer__button {
+                    width: 39%
+                }
+
+                .footer__button .button {
+                    float: right;
+                }
+            }
 		</style>
 
     </head>
@@ -75,7 +112,9 @@
 
 
 <header class="header">
-	<img src="map/static/images/logo2.png">
+    <div class="wrapper">
+        <img src="map/static/images/m_logo.png">
+    </div>
 </header>
 
 
@@ -86,7 +125,7 @@
 	}
 
 	#map {
-
+        height: 100%;
 	}
 
 	.map .baloon--login {
@@ -121,11 +160,30 @@
 		background-color: #009fe3;
 	}
 
-	.button.button--smalsize {
-		font-size: 11px;
-		height: 30px;
+	.button.button--smalsize, .button.button--pink {
+		font-size: 16px;
+		height: 40px;
 		line-height: 30px;
+        background-color: #0095da;
+        border-radius: 0;
+        padding: 0 20px;
 	}
+    .button.button--smalsize:hover, .button.button--pink:hover {
+        background-color: #0189c8;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255,255, .8);
+    }
+
+    .modal {
+        border-radius: 0;
+    }
 
 
 </style>
@@ -169,7 +227,7 @@
 <br />
 
 <div style="position: relative;left: 10px;right: 0;bottom: 30px;margin: 0 auto;padding: 20px 0 25px 0;z-index: 1;display: inline-block;">
-	<button class="button button--blue button--smalsize" type="button" onclick="trolley.myHouseIsNotFound();">Не нашёл свой дом</button>
+
 </div>
 
 <br />
@@ -207,7 +265,15 @@
 </div>
 
 <div class="footer">
-    Зарегистрируйтесь тут, с вами свяжется координатор чтобы передать информационные материалы для вашего дома и значок «Москвичи за троллейбус». Он также расскажет, чем ещё вы сможете помочь кампании за сохранение троллейбуса в центре Москвы
+    <div class="wrapper">
+        <div class="footer__text">
+            Зарегистрируйтесь тут, с вами свяжется координатор чтобы передать информационные материалы для вашего дома и значок «Москвичи за троллейбус». Он также расскажет, чем ещё вы сможете помочь кампании за сохранение троллейбуса в центре Москвы.
+        </div>
+        <div class="footer__button">
+            <button class="button button--blue button--smalsize" type="button" onclick="trolley.myHouseIsNotFound();">Не нашёл свой дом</button>
+        </div>
+    </div>
+
 </div>
 <div class="cachedImages" style="display: none;">
 
