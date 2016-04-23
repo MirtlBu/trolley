@@ -127,17 +127,22 @@
 
 #trolleybus .btn-primary {
     width: 255px;
-    height: 60px;
-    font-size: 24px;
+    margin-top: 20px;
     background-color: #009fe3;
     color: #fff;
     border: none;
-    margin-top: 30px;
     opacity: .9;
 }
 
 #trolleybus .btn-primary:hover {
     opacity: 1;
+}
+
+#trolleybus .btn-primary.btn--start {
+    width: 255px;
+    height: 60px;
+    font-size: 24px;
+    margin-top: 30px;
 }
 
 #trolleybus strong {
@@ -251,7 +256,7 @@
         margin: 7px 0 0 0;
     }
 
-    #trolleybus .btn-primary {
+    #trolleybus .btn-primary.btn--start {
         width: 365px;
     }
 }

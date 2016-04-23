@@ -74,9 +74,17 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         </strong>
                     </div>
                     <div class="col-md-11">
-                        <button class="btn btn-primary ladda-button" data-style="expand-left">
+                        <button class="btn btn-primary ladda-button btn--start" data-style="expand-left">
                             <span class="ladda-label">Начать звонить</span>
                         </button>
+                        <form class="form">
+                            <input class="form__input" type="text" name="name" placeholder="Имя и отчество жителя">
+                            <input class="form__input" type="text" name="phone" placeholder="Номер телефона">
+                            <input class="form__input" type="text" name="address" placeholder="Адрес">
+                            <button class="btn btn-primary ladda-button" data-style="expand-left">
+                                <span class="ladda-label">Записать</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="rightbar col-md-4 col-sm-12">
@@ -254,11 +262,6 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
-                    <form class="form">
-                        <input class="form__input" type="text" name="name" placeholder="Имя и отчество жителя">
-                        <input class="form__input" type="text" name="phone" placeholder="Номер телефона">
-                        <input class="form__input" type="text" name="address" placeholder="Адрес">
-                    </form>
                 </div>
             </div>
         </div>
@@ -267,7 +270,8 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
 
 <script type="text/javascript">
     $(function() {
-      $('.btn-default').click( function() {
+      $('.btn-default').click( function(event) {
+        event.stopPropagation();
         if($(this).next('.tip').hasClass('show')) {
             $(this).next('.tip').removeClass('show').addClass('hidden');
         }
@@ -279,10 +283,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
         }
       });
       $('.close').on('click', function() {
-        $(this).closest('.tip').removeClass('show').addClass('hidden');
+          $(this).closest('.tip').removeClass('show').addClass('hidden');
       });
-      $('.tip').on('click', function() {
-        $(this).removeClass('show').addClass('hidden');
+      $('#trolleybus').on('click', function() {
+            if($('.tip').hasClass('show')) {
+                $('.tip').removeClass('show').addClass('hidden');
+            }
       });
     });
 </script>
