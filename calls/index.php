@@ -28,17 +28,20 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
             <div class="container">
                 <div class="navbar-header">
                     <div class="header">
-                        <div class="header__logo col-md-6">
+                        <div class="header__logo col-md-4">
                             <img src="logo_shield.png" alt="logo">
                         </div>
-                        <div class="call_controls col-md-6">
+                        <div class="header__target col-md-4">
+                            <strong>Цель звонка:</strong> проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
+                        </div>
+                        <div class="call_controls col-md-4">
                             <div class="call_controls__time">00:23:00</div>
                             <div class="call_controls__button">
-                                <button class="initiate-call btn btn-success ladda-button" data-style="expand-left" data-ember-action="502">
+                                <button class="initiate-call btn btn-success ladda-button hidden" data-style="expand-left" data-ember-action="502">
                                     <span class="ladda-label">Принимать звонки</span>
                                 </button>
 
-                                <button class="end-call btn btn-danger ladda-button" data-style="expand-left" disabled="disabled">
+                                <button class="end-call btn btn-danger ladda-button" data-style="expand-left">
                                     <span class="ladda-label">Отключиться</span>
                                 </button>
                             </div>
@@ -251,6 +254,11 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
+                    <form class="form">
+                        <input class="form__input" type="text" name="name" placeholder="Имя и отчество жителя">
+                        <input class="form__input" type="text" name="phone" placeholder="Номер телефона">
+                        <input class="form__input" type="text" name="address" placeholder="Адрес">
+                    </form>
                 </div>
             </div>
         </div>
@@ -260,13 +268,21 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
 <script type="text/javascript">
     $(function() {
       $('.btn-default').click( function() {
-        $(this)
-        .siblings('.tip').removeClass('show').addClass('hidden').end()
-        .next('.tip').removeClass('hidden').addClass('show').end()
-        .addClass('active').siblings('.btn-default').removeClass('active');
+        if($(this).next('.tip').hasClass('show')) {
+            $(this).next('.tip').removeClass('show').addClass('hidden');
+        }
+        else {
+            $(this)
+            .siblings('.tip').removeClass('show').addClass('hidden').end()
+            .next('.tip').removeClass('hidden').addClass('show').end()
+            .addClass('active').siblings('.btn-default').removeClass('active');
+        }
       });
       $('.close').on('click', function() {
         $(this).closest('.tip').removeClass('show').addClass('hidden');
+      });
+      $('.tip').on('click', function() {
+        $(this).removeClass('show').addClass('hidden');
       });
     });
 </script>

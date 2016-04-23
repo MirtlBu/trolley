@@ -29,35 +29,34 @@
     width: 100%;
 }
 
-.header {
+#trolleybus .header {
     min-height: 93px;
     padding: 20px 0 7px 0;
     box-sizing: border-box;
-    font-size: 0;
     border-bottom: 1px solid #009fe3;
 }
 
-.header__logo, .call_controls {
-    display: inline-block;
-    vertical-align: bottom;
-    font-size: 18px;
-    width: 50%;
+#trolleybus .header__target {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 7px 0 0 100px;
 }
 
-.header__logo img {
+#trolleybus .header__logo img {
     margin-left: 45px;
 }
 
 .call_controls {
-    text-align: right;
-    margin-top: 30px;
+    margin: 30px 0 0 100px;
 }
 
 .call_controls__time, .call_controls__button {
     display: inline-block;
+    vertical-align: bottom;
 }
 
 .call_controls__time {
+    line-height: 32px;
     margin-right: 6px;
     color: #959595;
 }
@@ -100,9 +99,13 @@
     color: #fff;
 }
 
+#trolleybus .btn-danger:hover {
+    background-color: #d9161d;
+}
+
 #trolleybus .btn-default {
     width: 255px;
-    margin-bottom: 5px;
+    margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #009fe3;
     color: #009fe3;
@@ -112,6 +115,7 @@
 #trolleybus .btn-default:hover {
     color: #ed1c24;
     border: 1px solid #ed1c24;
+    z-index: 99;
 }
 
 #trolleybus .btn-default.active {
@@ -122,7 +126,7 @@
 }
 
 #trolleybus .btn-primary {
-    width: 365px;
+    width: 255px;
     height: 60px;
     font-size: 24px;
     background-color: #009fe3;
@@ -148,8 +152,13 @@
     margin-top: 7px;
 }
 
+#trolleybus .rightbar {
+    position: relative;
+}
+
 #trolleybus .tip {
     position: absolute;
+    top: 0;
     left: 0;
     width: 90%;
     margin: 0 auto 50px auto;
@@ -158,6 +167,7 @@
     border: 1px solid #009fe3;
     text-align: left;
     z-index: 99;
+    box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.5);
 }
 
 #trolleybus .tip .close {
@@ -171,17 +181,6 @@
     background-position: 0 0;
     opacity: 1;
     outline: none;
-}
-
-#trolleybus .tip:after {
-    content: '';
-    position: absolute;
-    right: -30px;
-    top: 20px;
-    width: 30px;
-    height: 1px;
-    background-color: #009fe3;
-    display: none;
 }
 
 #trolleybus .tip .close:hover {
@@ -199,6 +198,23 @@
     color: #ed1c24;
 }
 
+#trolleybus .form {
+    width: 255px;
+    margin-top: 20px;
+}
+
+#trolleybus .form__input {
+    width: 100%;
+    height: 36px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+#trolleybus .form__input:focus {
+    border: 1px solid #009fe3;
+}
+
 @media (min-width: 992px) {
 
     #trolleybus .container {
@@ -212,10 +228,30 @@
     #trolleybus .tip {
         left: -595px;
         width: 590px;
-        margin: -41px 0 50px 0;
+        margin: 42px 0 50px 0;
     }
 
     #trolleybus .tip:after {
         display: block;
+    }
+
+    #trolleybus .form {
+        display: inline-block;
+    }
+
+    #trolleybus .call_controls {
+        text-align: right;
+    }
+
+    .call_controls {
+        margin: 30px 0 0 0;
+    }
+
+    #trolleybus .header__target {
+        margin: 7px 0 0 0;
+    }
+
+    #trolleybus .btn-primary {
+        width: 365px;
     }
 }
