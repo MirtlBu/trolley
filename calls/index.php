@@ -22,7 +22,7 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
 </script>
 </head>
 <body id="trolleybus">
-<div id="emberMain" class="ember-application">
+<div id="emberMain" class="ember-application calls">
     <div id="ember442" class="ember-view">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -54,24 +54,24 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <strong>
                             Начните разговор так:
                         </strong>
-                        <p>
+                        <p class="paragraf_text">
                             Здравствуйте. Я звоню вам из комитета “Москвичи за троллейбус”, меня зовут…..
                             Вы в курсе планов мэрии Москвы по ликвидации троллейбусов в центре города?
                             Что вы думаете по этому поводу? Как вы к этому относитесь?
                         </p>
                     </div>
                     <div class="col-md-11">
-                        <strong class="highlight-blue">
+                        <div class="highlight-blue">
                             Дальше постарайтесь обсудить тему с троллейбусами поподробнее, используя темы справа.
-                        </strong>
+                        </div>
                     </div>
                     <div class="col-md-11">
-                        <strong class="highlight-blue">
+                        <div class="highlight-blue">
                             В конце разговора призовите жителя записаться, чтобы мы к нему пришли, передали листовку и приняли обращение в мэрию.
-                        </strong>
+                        </div>
                     </div>
                     <div class="col-md-11">
-                        <button class="btn btn-primary ladda-button btn--start" data-style="expand-left">
+                        <button class="btn btn-primary ladda-button btn--main" data-style="expand-left">
                             <span class="ladda-label">Начать звонить</span>
                         </button>
                     </div>
@@ -80,12 +80,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                     <div class="title">
                         Подсказки к разговору
                     </div>
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Инфо о снятии</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 В этом году мэрия Москвы планирует ликвидировать троллейбусы в центре города.
                                 Прекратится движение по Тверской, Бульварному кольцу, Новому Арбату, Сретенке, Кремлёвскому кольцу
                                 и другим центральным улицам. Троллейбусы в центре заменят на дизельные автобусы.
@@ -95,54 +95,54 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right  button--tips" data-style="expand-left">
                         <span class="ladda-label">Почему собираются снять?</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>Они объясняют это решение тем, что троллейбусы невыгодны.
+                            <p class="paragraf_text">Они объясняют это решение тем, что троллейбусы невыгодны.
                                 Это неправда — эксплуатировать троллейбус по данным Мосготранса на 15,5% дешевле, чем автобус.
                             </p>
-                            <p>
+                            <p class="paragraf_text">
                                 Ещё говорят что троллейбус неповоротливый и создает помехи.
                                 На самом деле в центре города проведена реконструкция контактной сети и теперь троллейбусы также манёврены,
                                 как автобусы.
                             </p>
-                            <p>
+                            <p class="paragraf_text">
                                 Также говорят, что контактная сеть в плохом состоянии и происходят энергопотери,
                                 но это опровергли сотрудники Мосготранса в открытом письме.
                                 Также мэрия говорит, что дорого модернизировать контактную сеть. Однако, стоимость модернизации составляет меньше 1%
                                 от расходов на программу благоустройства “Моя улица” в этом году.
                             </p>
-                            <p>
+                            <p class="paragraf_text">
                                 Реальные причины снятия не ясны, их не анонсируют.
                             </p>
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Почему молчат?</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Мэрия знает, что эксперты и жители против снятия троллейбуса, поэтому не анонсирует это решение.
                             </p>
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Преимущества</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Троллейбус более комфортен для поездок. В нём в отличие от автобуса не пахнет горючим, он плавнее едет,
                                 электрический двигатель не создаёт вибрацию и не нагревает салон.
                             </p>
-                            <p>
+                            <p class="paragraf_text">
                                 Троллейбусы дешевле автобусов в эксплуатации; срок службы подвижного состава у них больше,
                                 чем автобуса; затраты на обслуживание троллейбусного парка на 15,5% меньше, чем на автобусный.
                                 Троллейбус не производит выбросов в атмосферу в отличие даже от самых современных дизельных автобусов.
@@ -151,12 +151,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Экология</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Во время движения троллейбус не производит вредных выбросов. С заменой одного троллейбуса на один дизельный автобус
                                 в городскую атмосферу будут ежегодно выбрасываться 1,5 тонны угарного газа , 1 тонна оксида азота, пол-тонны оксидов серы
                                 и 200 килограмм твердых микрочастиц.
@@ -165,12 +165,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Экономика</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Стоимость эксплуатации одного троллейбуса составляет 3 миллиона 410 тысяч рублей в год,
                                 в то время как эксплуатация одного автобуса стоит 3 миллиона 940 тысяч рублей.
                                 Таким образом, троллейбус экономичнее на 15,5% с учетом всей сопутствующей инфраструктуры и амортизации.
@@ -179,12 +179,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Модернизация</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Московские власти говорят о необходимости обновления контактной сети и огромных инвестициях для этого.
                                 Однако контактная сеть Москвы нуждается в модернизации лишь отдельных узлов и агрегатов,
                                 чтобы соответствовать современным мировым стандартам качества и эстетичности. Кроме того,
@@ -196,17 +196,17 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Троллейбус в мире</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 В середине прошлого века некоторые города отказались от троллейбусов.
                                 В настоящее время экспертным сообществом это признано крупной градостроительной ошибкой.
                                 В тех городах, где сегодня сохранились троллейбусные системы, их развивают и модернизируют.
                             </p>
-                            <p>
+                            <p class="paragraf_text">
                                 Технологии развиваются, и современный троллейбус по всем характеристикам не уступает автобусу.
                                 Он манёвренный, такой же быстрый, а его провода почти незаметны.
                             </p>
@@ -214,12 +214,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">О неповороливости</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Троллейбус объезжает без проблем машины, припаркованные на обочине с соблюдением правил.
                                 А вот автотранспорт, стоящий не по правилам, является проблемой не только троллейбуса, а для всего транспортного потока.
                                 Еще нужно знать, что проблема не в троллейбусе, а в его контактной сети.
@@ -231,12 +231,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
 
-                    <button class="btn btn-default ladda-button pull-right" data-style="expand-left">
+                    <button class="btn btn-default ladda-button pull-right button--tips" data-style="expand-left">
                         <span class="ladda-label">Что делать?</span>
                     </button>
                     <div class="tip hidden">
                         <div class="tip__text">
-                            <p>
+                            <p class="paragraf_text">
                                 Комитет “Москвичи за троллейбус” выпустил информационные буклеты, и есть интернет-сайт.
                                 Важно помочь с распространением информации, потому что многие москвичи не в курсе планов мэрии.
                                 Листовки можно получить с курьером себе домой и раздать их соседям, коллегам или разложить их по почтовым ящикам
@@ -244,15 +244,15 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                                 чтобы принести вам листовок.
                                 Он может принести вам на подпись и обращение в мэрию и потом отправить его.
                             </p>
-                            <p>
-                                <a href="http://trolley.city4people.ru/map/">http://trolley.city4people.ru/map/</a>
+                            <p class="paragraf_text">
+                                <a href="http://trolley.city4people.ru/map/" class="calls_link">http://trolley.city4people.ru/map/</a>
                             </p>
-                            <p>Скажите улицу и номер дома. Ваш телефон. Как вас зовут. Спасибо!</p>
+                            <p class="paragraf_text">Скажите улицу и номер дома. Ваш телефон. Как вас зовут. Спасибо!</p>
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
                 </div>
-                <form class="form">
+                <form class="form col-md-12 col-sm-12">
                     <div class="form__target col-md-4">
                         <strong>Цель звонка:</strong> <br />проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
                     </div>
@@ -264,7 +264,7 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <label for="input-address" class="form__label">Адрес</label>
                         <input id="input-address" class="form__input" type="text" name="address">
                         <label class="form__label"></label>
-                        <button class="btn btn-primary ladda-button" data-style="expand-left">
+                        <button class="btn btn-primary ladda-button btn--main" data-style="expand-left">
                             <span class="ladda-label">Отправить</span>
                         </button>
                     </div>
@@ -276,7 +276,7 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
 
 <script type="text/javascript">
     $(function() {
-      $('.btn-default').click( function(event) {
+      $('.button--tips').click( function(event) {
         event.stopPropagation();
         if($(this).next('.tip').hasClass('show')) {
             $(this).next('.tip').removeClass('show').addClass('hidden');

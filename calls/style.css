@@ -4,32 +4,36 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
-#trolleybus .container {
+#trolleybus .calls .col-md-4, #trolleybus .calls .col-md-6, #trolleybus .calls .col-md-8, #trolleybus .calls .col-md-11, #trolleybus .calls .col-md-12 {
+    padding: 0;
+}
+
+#trolleybus .calls .container {
     width: 100%;
     margin: 0 auto;
     padding: 0;
     font-size: 18px;
 }
 
-#trolleybus p {
+#trolleybus .paragraf_text {
     line-height: 28px;
     padding: 0;
 }
 
-#trolleybus .navbar {
+#trolleybus .calls .navbar {
     margin-bottom: 0;
 }
 
-#trolleybus .navbar-default {
+#trolleybus .calls .navbar-default {
     background-color: #fff;
     border: none;
 }
 
-#trolleybus .navbar-header {
+#trolleybus .calls .navbar-header {
     width: 100%;
 }
 
-#trolleybus .header {
+#trolleybus .calls .header {
     min-height: 93px;
     padding: 20px 0 7px 0;
     box-sizing: border-box;
@@ -59,11 +63,7 @@
     padding: 23px 0 0 100px;
 }
 
-#trolleybus .col-md-4, #trolleybus .col-md-6, #trolleybus .col-md-8, #trolleybus .col-md-11, #trolleybus .col-md-12 {
-    padding: 0;
-}
-
-#trolleybus .title {
+#trolleybus .calls .title {
     margin-bottom: 10px;
 }
 
@@ -71,7 +71,7 @@
     margin: 0 57px 17px 0;
 }
 
-#trolleybus .btn {
+#trolleybus .calls .btn {
     height: 36px;
     font-size: 18px;
     line-height: 21px;
@@ -87,17 +87,16 @@
     transition: none !important;
 }
 
-#trolleybus .btn-danger {
-    width: 145px;
+#trolleybus .calls .btn-danger {
     background-color: #ed1c24;
     color: #fff;
 }
 
-#trolleybus .btn-danger:hover {
+#trolleybus .calls .btn-danger:hover {
     background-color: #d9161d;
 }
 
-#trolleybus .btn-default {
+#trolleybus .calls .button--tips {
     width: 255px;
     margin-bottom: -1px;
     background-color: #fff;
@@ -106,20 +105,20 @@
     float: none !important;
 }
 
-#trolleybus .btn-default:hover {
+#trolleybus .calls .button--tips:hover {
     color: #ed1c24;
     border: 1px solid #ed1c24;
     z-index: 99;
 }
 
-#trolleybus .btn-default.active {
+#trolleybus .calls .button--tips.active {
     background-color: #009fe3;
     color: #fff;
     border: 1px solid transparent;
     box-shadow: none;
 }
 
-#trolleybus .btn-primary {
+#trolleybus .calls .btn--main {
     padding: 0 20px;
     margin-top: 20px;
     background-color: #009fe3;
@@ -129,22 +128,19 @@
     opacity: .9;
 }
 
-#trolleybus .btn-primary:hover {
+#trolleybus .calls .btn--main:hover {
     opacity: 1;
 }
 
-#trolleybus .btn-primary.btn--start {
-    width: 255px;
+#trolleybus .calls .leftbar .btn--main {
+    width: 360px;
     height: 60px;
     font-size: 24px;
     margin-top: 30px;
 }
 
-#trolleybus strong {
-    margin-bottom: 5px;
-}
-
 #trolleybus .highlight-blue {
+    margin-bottom: 5px;
     color: #009fe3;
 }
 
@@ -191,12 +187,12 @@
     background-position: -19px 0;
 }
 
-#trolleybus a {
+#trolleybus .calls_link {
     color: #009fe3;
     border-bottom: 1px solid #009fe3;
 }
 
-#trolleybus a:hover {
+#trolleybus .calls_link:hover {
     border-bottom: 1px solid #ed1c24;
     text-decoration: none;
     color: #ed1c24;
@@ -204,13 +200,13 @@
 
 #trolleybus .form__target {
     font-size: 16px;
-    padding-right: 45px;
+    padding-right: 45px !important;
 }
 
 #trolleybus .form {
     width: 100%;
     margin-top: 30px;
-    padding: 20px;
+    padding: 20px !important;
     box-sizing: border-box;
     background-color: #e5f5fc;
     font-size: 14px;
@@ -239,7 +235,7 @@
 
 @media (min-width: 992px) {
 
-    #trolleybus .container {
+    #trolleybus .calls .container {
         width: 932px;
     }
 
