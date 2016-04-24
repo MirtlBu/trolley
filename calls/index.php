@@ -20,6 +20,132 @@
 window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";gon.sip_password="800";gon.logout_link="<a rel=\"nofollow\" data-method=\"delete\" href=\"/users/sign_out\">Logout</a>";
 //]]>
 </script>
+
+
+<script>
+
+
+// Shorter variant of the jquery ajax function.
+function shortAjax(path, data, onSuccess, unique_name){
+
+	if (unique_name === undefined){
+		$.ajax({
+			type: "GET",
+			url: path,
+			cache: false,
+			data: data,
+			success: onSuccess,
+		});	
+	}
+	else {
+		// Deletes multi-queries
+		if (GLOBAL_AJAX[unique_name] !== undefined){
+			if (typeof(GLOBAL_AJAX[unique_name]) !== undefined)	GLOBAL_AJAX[unique_name].abort();
+		}
+		
+		GLOBAL_AJAX[unique_name] = $.ajax({
+			type: "GET",
+			url: path,
+			cache: false,
+			data: data,
+			success: onSuccess,
+		});		
+	}
+}
+
+function smartAjax(path, data, onSuccess, onError, unique_name){
+	
+	var innerHandler = function(msg){
+		//var steamid = arguments.callee.steamid ;
+		
+		try {
+			
+			msg = JSON.parse(msg);
+			
+		}
+		catch (e){
+			msg = {};
+			msg.error = 'incorrectJSON';
+		}
+	
+			
+		if (typeof(arguments.callee.onSuccess) == "function" && msg.error == "false"){
+			arguments.callee.onSuccess.apply(null, [msg]);
+		}		
+
+
+		
+		if (typeof(arguments.callee.onError) == "function" && msg.error != "false"){
+			arguments.callee.onError.apply(null, [msg]);
+		}
+		else {
+			if (msg.error != "false"){
+				if (msg.error_text !== undefined){
+					mainSite.postError(msg.error_text);
+				}
+				else {
+					console.log(msg.error);
+				}			
+			}					
+		}
+		
+	};
+	
+	innerHandler.onSuccess = onSuccess ;
+	innerHandler.onError = onError ;
+	
+	shortAjax(path, data, innerHandler, unique_name);
+	
+}
+
+
+
+gitter = {
+	
+	button: {},
+
+	sendUserInfoForm: function(){
+		
+		gitter.setButtonStatus('Подождите');
+		
+		var container = $('.userInfoForm');
+	
+		var data = {};
+		
+		container.find('input.ajax_arg, textarea.ajax_arg').each(function(){
+			data[$(this).attr('name')] = $(this).val();
+		});		
+		
+		data.context = 'addFromCallcentre';
+		
+		smartAjax('http://trolley.city4people.ru/map/ajax/ajax_trolley.php', data, function(msg){
+			
+			alert('Готово!');
+			
+			gitter.setButtonStatus('Отправить');
+			
+			var container = $('.userInfoForm');
+			
+			container.find('ajax_arg').val('');
+			
+		}, function(msg){
+			alert(msg.error_text);
+			
+			gitter.setButtonStatus('Отправить');
+		});			
+	
+	},
+	
+	setButtonStatus: function(text){
+	
+		$(gitter.button).find('span').html(text);
+	},
+
+};
+
+</script>
+
+
 </head>
 <body id="trolleybus">
 <div id="emberMain" class="ember-application calls">
@@ -252,19 +378,19 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
                 </div>
-                <form class="form col-md-12 col-sm-12">
+                <form class="form col-md-12 col-sm-12 userInfoForm" onsubmit="return false;">
                     <div class="form__target col-md-4">
                         <strong>Цель звонка:</strong> <br />проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
                     </div>
                     <div class="form__inputs col-md-8">
                         <label for="input-name" class="form__label">Имя, отчество</label>
-                        <input id="input-name" class="form__input" type="text" name="name">
-                        <label for="input-phone" class="form__label">Телефона</label>
-                        <input id="input-phone" class="form__input" type="text" name="phone">
+                        <input id="input-name" class="form__input ajax_arg" type="text" name="name">
+                        <label for="input-phone" class="form__label ">Телефона</label>
+                        <input id="input-phone" class="form__input ajax_arg" type="text" name="phone">
                         <label for="input-address" class="form__label">Адрес</label>
-                        <input id="input-address" class="form__input" type="text" name="address">
+                        <input id="input-address" class="form__input ajax_arg" type="text" name="address">
                         <label class="form__label"></label>
-                        <button class="btn btn-primary ladda-button btn--main" data-style="expand-left">
+                        <button class="btn btn-primary ladda-button btn--main" onClick="gitter.button = this ; gitter.sendUserInfoForm(); return false;" data-style="expand-left">
                             <span class="ladda-label">Отправить</span>
                         </button>
                     </div>
