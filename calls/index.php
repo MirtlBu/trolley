@@ -35,46 +35,46 @@ function shortAjax(path, data, onSuccess, unique_name){
 			cache: false,
 			data: data,
 			success: onSuccess,
-		});	
+		});
 	}
 	else {
 		// Deletes multi-queries
 		if (GLOBAL_AJAX[unique_name] !== undefined){
 			if (typeof(GLOBAL_AJAX[unique_name]) !== undefined)	GLOBAL_AJAX[unique_name].abort();
 		}
-		
+
 		GLOBAL_AJAX[unique_name] = $.ajax({
 			type: "GET",
 			url: path,
 			cache: false,
 			data: data,
 			success: onSuccess,
-		});		
+		});
 	}
 }
 
 function smartAjax(path, data, onSuccess, onError, unique_name){
-	
+
 	var innerHandler = function(msg){
 		//var steamid = arguments.callee.steamid ;
-		
+
 		try {
-			
+
 			msg = JSON.parse(msg);
-			
+
 		}
 		catch (e){
 			msg = {};
 			msg.error = 'incorrectJSON';
 		}
-	
-			
+
+
 		if (typeof(arguments.callee.onSuccess) == "function" && msg.error == "false"){
 			arguments.callee.onSuccess.apply(null, [msg]);
-		}		
+		}
 
 
-		
+
 		if (typeof(arguments.callee.onError) == "function" && msg.error != "false"){
 			arguments.callee.onError.apply(null, [msg]);
 		}
@@ -85,59 +85,59 @@ function smartAjax(path, data, onSuccess, onError, unique_name){
 				}
 				else {
 					console.log(msg.error);
-				}			
-			}					
+				}
+			}
 		}
-		
+
 	};
-	
+
 	innerHandler.onSuccess = onSuccess ;
 	innerHandler.onError = onError ;
-	
+
 	shortAjax(path, data, innerHandler, unique_name);
-	
+
 }
 
 
 
 gitter = {
-	
+
 	button: {},
 
 	sendUserInfoForm: function(){
-		
+
 		gitter.setButtonStatus('Подождите');
-		
+
 		var container = $('.userInfoForm');
-	
+
 		var data = {};
-		
+
 		container.find('input.ajax_arg, textarea.ajax_arg').each(function(){
 			data[$(this).attr('name')] = $(this).val();
-		});		
-		
+		});
+
 		data.context = 'addFromCallcentre';
-		
+
 		smartAjax('http://trolley.city4people.ru/map/ajax/ajax_trolley.php', data, function(msg){
-			
+
 			alert('Готово!');
-			
+
 			gitter.setButtonStatus('Отправить');
-			
+
 			var container = $('.userInfoForm');
-			
+
 			container.find('ajax_arg').val('');
-			
+
 		}, function(msg){
 			alert(msg.error_text);
-			
+
 			gitter.setButtonStatus('Отправить');
-		});			
-	
+		});
+
 	},
-	
+
 	setButtonStatus: function(text){
-	
+
 		$(gitter.button).find('span').html(text);
 	},
 
@@ -376,9 +376,6 @@ gitter = {
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <form class="form col-md-12 col-sm-12 userInfoForm" onsubmit="return false;">
-=======
                 <div class="col-md-12 col-sm-12 tip tip--big hidden">
                     <strong>Что ожидать от обзвона</strong><br />
                     <p>По нашей статистике, примерно 1 из 3 человек откажется с вами разговаривать — это нормально.
@@ -412,8 +409,7 @@ gitter = {
                     </p>
                     <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                 </div>
-                <form class="form col-md-12 col-sm-12">
->>>>>>> origin/master
+                <form class="form col-md-12 col-sm-12 userInfoForm" onsubmit="return false;">
                     <div class="form__target col-md-4">
                         <strong>Цель звонка:</strong> <br />проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
                     </div>
