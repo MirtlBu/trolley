@@ -238,9 +238,8 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                             <p class="paragraf_text">
                                 Комитет “Москвичи за троллейбус” выпустил информационные буклеты, и есть интернет-сайт.
                                 Важно помочь с распространением информации, потому что многие москвичи не в курсе планов мэрии.
-                                Листовки можно получить с курьером себе домой и раздать их соседям, коллегам или разложить их по почтовым ящикам
-                                в своем подъезде. Если хотите, я ваш дом отмечу на карте, и с вами свяжется курьер из комитета,
-                                чтобы принести вам листовок.
+                                Листовки можно получить у Комитета себе домой и раздать их соседям, коллегам или разложить их по почтовым ящикам
+                                в своем подъезде. Если хотите, я вас зарегистрирую, и с вами свяжется волонтёр из комитета, чтобы принести вам листовок.
                                 Он может принести вам на подпись и обращение в мэрию и потом отправить его.
                             </p>
                             <p class="paragraf_text">
@@ -320,17 +319,28 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
             .addClass('active').siblings('.btn-default').removeClass('active');
         }
       });
+
+      $('#expectations').on('click', function(event) {
+            event.stopPropagation();
+            $('.tip--big').removeClass('hidden').addClass('show');
+      });
+
       $('.close').on('click', function() {
           $('.tip').removeClass('show').addClass('hidden');
       });
-      $('#trolleybus').on('click', function() {
+
+      $('#trolleybus').on('click', function(event) {
+        console.log();
+        if(event.target.closest('.tip')) {
+            return;
+        }
+        else {
             if($('.tip').hasClass('show')) {
                 $('.tip').removeClass('show').addClass('hidden');
             }
+        }
       });
-      $('#expectations').on('click', function() {
-            $('.tip--big').removeClass('hidden');
-      })
+
     });
 </script>
 
