@@ -60,13 +60,11 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                             Что вы думаете по этому поводу? Как вы к этому относитесь?
                         </p>
                     </div>
-                    <div class="col-md-11">
-                        <div class="highlight-blue">
-                            Дальше постарайтесь обсудить тему с троллейбусами поподробнее, используя темы справа.
+                    <div class="col-md-11 lined">
+                        <div class="">
+                        Дальше постарайтесь обсудить тему с троллейбусами поподробнее, используя темы справа.
                         </div>
-                    </div>
-                    <div class="col-md-11">
-                        <div class="highlight-blue">
+                        <div class="">
                             В конце разговора призовите жителя записаться, чтобы мы к нему пришли, передали листовку и приняли обращение в мэрию.
                         </div>
                     </div>
@@ -74,6 +72,7 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button class="btn btn-primary ladda-button btn--main" data-style="expand-left">
                             <span class="ladda-label">Начать звонить</span>
                         </button>
+                        <div class="calls_link" id="expectations">Что мне ожидать от обзвона</div>
                     </div>
                 </div>
                 <div class="rightbar col-md-4 col-sm-12">
@@ -252,6 +251,39 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
                 </div>
+                <div class="col-md-12 col-sm-12 tip tip--big hidden">
+                    <strong>Что ожидать от обзвона</strong><br />
+                    <p>По нашей статистике, примерно 1 из 3 человек откажется с вами разговаривать — это нормально.
+                        Даже если вам попадётся таких несколько подряд, это не причина расстраиваться.
+                        С холодными звонками это обычная ситуация.
+                    </p>
+                    <p>Человек, который согласится записаться к нам в волонтёры попадётся вам примерно 1 раз
+                        из 50 звонков.
+                    </p>
+                    <p>
+                        Большинство людей будет вам отвечать, что им всё-равно. Это нормально — у них свои дела и заботы, скорее всего,
+                        раньше они не думали о троллейбусах пока вы не позвонили.
+                    </p>
+                    <p>
+                        После вашего рассказа они задумаются об этом, запомнят, что кто-то им звонил и кому-то это важно.
+                        Даже если они ответят что им неинтересно, вы их проинформировали, и когда троллейбус будут снимать,
+                        они возмутятся, а если телевизору скажут, что он плохой — они вспомнят ваш звонок и не поверят.
+                    </p>
+                    <p>
+                        Когда 5 человек ответит вам что им всё-равно вам может показаться,
+                        что всем неинтересна эта проблема или что вы что-то делаете не так.
+                        Это ложное ощущение — ведь у вас нет другой обратной связи, вы не узнаете о тех людях,
+                        которые пошли после разговора писать письма в мэрию или говорить с соседями.
+                    </p>
+                    <p>
+                        А о недовольных вы узнаёте сразу, получается неверная выборка и неверное ощущение.
+                    </p>
+                    <p>
+                        Чем больше звонков вы сделаете, тем больше москвичей будут в курсе проблемы, и тем сложнее будет властям врать им
+                        про троллейбусы. Не обращайте внимания на реакцию, не пытайтесь оценивать людей и, тем более, не беспокойтесь о том, что вы что-то делаете не так — просто звоните.
+                    </p>
+                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
+                </div>
                 <form class="form col-md-12 col-sm-12">
                     <div class="form__target col-md-4">
                         <strong>Цель звонка:</strong> <br />проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
@@ -289,13 +321,16 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
         }
       });
       $('.close').on('click', function() {
-          $(this).closest('.tip').removeClass('show').addClass('hidden');
+          $('.tip').removeClass('show').addClass('hidden');
       });
       $('#trolleybus').on('click', function() {
             if($('.tip').hasClass('show')) {
                 $('.tip').removeClass('show').addClass('hidden');
             }
       });
+      $('#expectations').on('click', function() {
+            $('.tip--big').removeClass('hidden');
+      })
     });
 </script>
 

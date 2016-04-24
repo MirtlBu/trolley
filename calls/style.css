@@ -16,7 +16,7 @@
 }
 
 #trolleybus .paragraf_text {
-    line-height: 28px;
+    line-height: 24px;
     padding: 0;
 }
 
@@ -136,7 +136,7 @@
     width: 360px;
     height: 60px;
     font-size: 24px;
-    margin-top: 30px;
+    margin: 30px 0 8px 0;
 }
 
 #trolleybus .highlight-blue {
@@ -145,7 +145,7 @@
 }
 
 #trolleybus .leftbar .col-md-11 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #trolleybus .leftbar p {
@@ -170,6 +170,20 @@
     box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.5);
 }
 
+#trolleybus .tip--big {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 645px !important;
+    margin: 0 auto;
+    padding: 30px 35px !important;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    z-index: 99;
+}
+
 #trolleybus .tip .close {
     position: absolute;
     right: 10px;
@@ -189,6 +203,7 @@
 
 #trolleybus .calls_link {
     color: #009fe3;
+    line-height: 16px;
     border-bottom: 1px solid #009fe3;
 }
 
@@ -205,7 +220,7 @@
 
 #trolleybus .form {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 20px !important;
     box-sizing: border-box;
     background-color: #e5f5fc;
@@ -231,6 +246,21 @@
 #trolleybus .form__label {
     width: 105px;
     font-weight: normal;
+}
+
+#trolleybus .lined {
+    border-left: 1px solid #009fe3;
+    padding-left: 15px !important;
+    font-style: italic;
+}
+
+#trolleybus .calls_link {
+    display: inline-block;
+    font-size: 16px;
+}
+
+#expectations {
+    cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -272,5 +302,11 @@
 
     #trolleybus .form__input {
         width: 380px;
+    }
+
+    #trolleybus .tip--big {
+        left: 20%;
+        right: 0;
+        top: 70px;
     }
 }
