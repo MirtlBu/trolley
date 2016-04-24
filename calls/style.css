@@ -36,12 +36,6 @@
     border-bottom: 1px solid #009fe3;
 }
 
-#trolleybus .header__target {
-    font-size: 14px;
-    line-height: 16px;
-    margin: 7px 0 0 100px;
-}
-
 #trolleybus .header__logo img {
     margin-left: 45px;
 }
@@ -126,7 +120,7 @@
 }
 
 #trolleybus .btn-primary {
-    width: 255px;
+    padding: 0 20px;
     margin-top: 20px;
     background-color: #009fe3;
     color: #fff;
@@ -147,6 +141,10 @@
 
 #trolleybus strong {
     margin-bottom: 5px;
+}
+
+#trolleybus .highlight-blue {
+    color: #009fe3;
 }
 
 #trolleybus .leftbar .col-md-11 {
@@ -203,9 +201,22 @@
     color: #ed1c24;
 }
 
+#trolleybus .form__target {
+    font-size: 16px;
+    padding-right: 45px;
+}
+
 #trolleybus .form {
-    width: 255px;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #e5f5fc;
+    font-size: 14px;
+}
+
+#trolleybus .form__inputs {
+    padding-left: 30px;
 }
 
 #trolleybus .form__input {
@@ -218,6 +229,11 @@
 
 #trolleybus .form__input:focus {
     border: 1px solid #009fe3;
+}
+
+#trolleybus .form__label {
+    width: 105px;
+    font-weight: normal;
 }
 
 @media (min-width: 992px) {
@@ -242,6 +258,7 @@
 
     #trolleybus .form {
         display: inline-block;
+
     }
 
     #trolleybus .call_controls {
@@ -252,11 +269,11 @@
         margin: 30px 0 0 0;
     }
 
-    #trolleybus .header__target {
-        margin: 7px 0 0 0;
-    }
-
     #trolleybus .btn-primary.btn--start {
         width: 365px;
+    }
+
+    #trolleybus .form__input {
+        width: 380px;
     }
 }

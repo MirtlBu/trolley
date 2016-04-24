@@ -28,13 +28,10 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
             <div class="container">
                 <div class="navbar-header">
                     <div class="header">
-                        <div class="header__logo col-md-4">
+                        <div class="header__logo col-md-6">
                             <img src="logo_shield.png" alt="logo">
                         </div>
-                        <div class="header__target col-md-4">
-                            <strong>Цель звонка:</strong> проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
-                        </div>
-                        <div class="call_controls col-md-4">
+                        <div class="call_controls col-md-6">
                             <div class="call_controls__time">00:23:00</div>
                             <div class="call_controls__button">
                                 <button class="initiate-call btn btn-success ladda-button hidden" data-style="expand-left" data-ember-action="502">
@@ -64,12 +61,12 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         </p>
                     </div>
                     <div class="col-md-11">
-                        <strong>
+                        <strong class="highlight-blue">
                             Дальше постарайтесь обсудить тему с троллейбусами поподробнее, используя темы справа.
                         </strong>
                     </div>
                     <div class="col-md-11">
-                        <strong>
+                        <strong class="highlight-blue">
                             В конце разговора призовите жителя записаться, чтобы мы к нему пришли, передали листовку и приняли обращение в мэрию.
                         </strong>
                     </div>
@@ -77,14 +74,6 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button class="btn btn-primary ladda-button btn--start" data-style="expand-left">
                             <span class="ladda-label">Начать звонить</span>
                         </button>
-                        <form class="form">
-                            <input class="form__input" type="text" name="name" placeholder="Имя и отчество жителя">
-                            <input class="form__input" type="text" name="phone" placeholder="Номер телефона">
-                            <input class="form__input" type="text" name="address" placeholder="Адрес">
-                            <button class="btn btn-primary ladda-button" data-style="expand-left">
-                                <span class="ladda-label">Записать</span>
-                            </button>
-                        </form>
                     </div>
                 </div>
                 <div class="rightbar col-md-4 col-sm-12">
@@ -263,6 +252,23 @@ window.gon={};gon.user_id=4;gon.user_name="Victor Babenko";gon.sip_login="800";g
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
                 </div>
+                <form class="form">
+                    <div class="form__target col-md-4">
+                        <strong>Цель звонка:</strong> <br />проинформировать жителя и получить его согласие помогать кампании, взять адрес и телефон.
+                    </div>
+                    <div class="form__inputs col-md-8">
+                        <label for="input-name" class="form__label">Имя, отчество</label>
+                        <input id="input-name" class="form__input" type="text" name="name">
+                        <label for="input-phone" class="form__label">Телефона</label>
+                        <input id="input-phone" class="form__input" type="text" name="phone">
+                        <label for="input-address" class="form__label">Адрес</label>
+                        <input id="input-address" class="form__input" type="text" name="address">
+                        <label class="form__label"></label>
+                        <button class="btn btn-primary ladda-button" data-style="expand-left">
+                            <span class="ladda-label">Отправить</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
