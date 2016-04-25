@@ -1,0 +1,164 @@
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+input, textarea, button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.container {
+  padding: 0 25px;
+}
+
+.top {
+  width: 100%;
+  min-height: 200px;
+  background: url("../img/top-header.jpg") no-repeat center center;
+  background-size: 100% auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrote {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 107px;
+    height: 90px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #0095da;
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+    z-index: 1;
+}
+
+.wrote__num {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.triangle {
+    position: relative;
+    left: 80px;
+    bottom: -148px;
+    width: 100%;
+    height: 189px;
+    background-color: #fff;
+    transform: rotate(153deg) skew(20deg,20deg);
+}
+
+.triangle.triangle-white {
+  border-bottom-color: #ffffff;
+}
+
+.slogan h1 {
+    font-size: 46px;
+    line-height: 45px;
+}
+
+.write_petition h2 {
+    font-size: 24px;
+}
+
+.petition, .petition__paper {
+    background-color: #f7f5e9;
+}
+
+.petition {
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.form__row {
+    margin-bottom: 10px;
+}
+
+.form__input {
+    width: 100%;
+    height: 28px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #aaa !important;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.form__input:focus {
+    border: 1px solid #85beff;
+}
+
+.form__input--short {
+    width: 120px;
+    margin-right: 5px;
+}
+
+.form__input--error {
+    border: 1px solid #ff4141;
+}
+
+.form__comment {
+    font-size: 16px;
+    color: #7f7f7f;
+    text-align: center;
+}
+
+.petition__text {
+    margin-top: 30px;
+}
+
+.petition__text strong {
+    display: block;
+    text-align: center;
+}
+
+.petition__date {
+    text-align: right;
+}
+
+.petition__controls {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.petition__sign {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.text_link {
+    display: inline-block;
+    line-height: 13px;
+    color: #0096ff;
+    border-bottom: 1px solid #0096ff;
+    cursor: pointer;
+}
+
+.petition__sign .text_link {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
