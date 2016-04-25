@@ -196,6 +196,11 @@ p {
     cursor: pointer;
 }
 
+.text_link:hover {
+    color: #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+
 .petition__sign .text_link {
     position: absolute;
     right: 10px;
@@ -247,7 +252,6 @@ p {
     background-image: url(../img/icon-checkbox.png);
     display: none;
 }
-
 
 .form__checkbox:checked + .label_checkbox:after {
     display: block;
@@ -318,5 +322,9 @@ p {
 
 .more_margin {
     margin-bottom: 25px;
+}
+
+.hidden {
+    display: none;
 }
 
