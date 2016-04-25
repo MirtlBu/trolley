@@ -22,6 +22,11 @@ input, textarea, button {
     box-shadow: none;
 }
 
+p {
+    margin: 5px 0;
+    line-height: 18px;
+}
+
 .container {
   padding: 0 25px;
 }
@@ -71,7 +76,7 @@ input, textarea, button {
 }
 
 .slogan {
-    margin-bottom: 15px;
+    margin: 10px 0 15px 0;
 }
 
 .slogan h1 {
@@ -82,6 +87,12 @@ input, textarea, button {
 .wrap {
     position: relative;
     z-index: 0;
+}
+
+.petition {
+    margin-bottom: 50px;
+    padding: 15px 0;
+    font-size: 14px;
 }
 
 .petition__paper {
@@ -109,11 +120,6 @@ input, textarea, button {
     z-index: -1;
 }
 
-.petition {
-    padding: 15px 0;
-    font-size: 14px;
-}
-
 .whom {
     margin-bottom: 10px;
 }
@@ -127,6 +133,7 @@ input, textarea, button {
     height: 28px;
     padding: 0 5px;
     box-sizing: border-box;
+    border: 1px solid transparent;
     border-bottom: 1px solid #ababab !important;
     background-color: #fff;
     font-size: 14px;
@@ -148,12 +155,13 @@ input, textarea, button {
 
 .form__comment {
     font-size: 16px;
+    line-height: 16px;
     color: #7f7f7f;
     text-align: center;
 }
 
 .petition__text {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .petition__text strong {
@@ -246,6 +254,7 @@ input, textarea, button {
 }
 
 .subscribe {
+    padding-bottom: 10px;
     margin-top: 25px;
     font-size: 14px;
     text-align: center;
@@ -272,14 +281,14 @@ input, textarea, button {
 
 .subscribe__button {
     width: 225px;
-    height: 52px;
+    height: 51px;
     margin-top: 18px;
     background-color: #ff0000;
     font-size: 22px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     cursor: pointer;
     opacity: .8;
 }
@@ -304,6 +313,10 @@ input, textarea, button {
 }
 
 .flexbox__item:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.more_margin {
+    margin-bottom: 25px;
 }
 
