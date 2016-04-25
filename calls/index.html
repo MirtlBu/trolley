@@ -13,6 +13,7 @@
 <script src="https://mksurvey-staging.gnhq.info/assets/application-fe8c70d1b972a5830d3c3e770c7dc8cd40ffd60db74ed707acbbc7016e4ce751.js" data-turbolinks-track="true"></script><style type="text/css"></style>
 <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,400italic&amp;subset=latin,cyrillic">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="modal.css">
 <meta name="csrf-param" content="authenticity_token">
 <meta name="csrf-token" content="GcJ1GN7SEzZHJAmuaGOfFGwFjX4rx9ZmmxQEuOoiXEVOjNI1x3mt4UktIzQKJJ3RmDH5gY5DyqjwyJT1gTRx+A==">
 <script>
@@ -182,8 +183,8 @@ gitter = {
                         </strong>
                         <p class="paragraf_text">
                             Здравствуйте. Я звоню вам из комитета “Москвичи за троллейбус”, меня зовут…..
-                            Вы в курсе планов мэрии Москвы по ликвидации троллейбусов в центре города?
-                            Что вы думаете по этому поводу? Как вы к этому относитесь?
+							Вы в курсе планов мэрии Москвы по ликвидации троллейбусов в центре города?
+							Что вы думаете по этому поводу? Как вы к этому относитесь?
                         </p>
                     </div>
                     <div class="col-md-11 lined">
@@ -368,10 +369,9 @@ gitter = {
                                 в своем подъезде. Если хотите, я вас зарегистрирую, и с вами свяжется волонтёр из комитета, чтобы принести вам листовок.
                                 Он может принести вам на подпись и обращение в мэрию и потом отправить его.
                             </p>
-                            <p class="paragraf_text">
-                                <a href="http://trolley.city4people.ru/map/" class="calls_link">http://trolley.city4people.ru/map/</a>
-                            </p>
-                            <p class="paragraf_text">Скажите улицу и номер дома. Ваш телефон. Как вас зовут. Спасибо!</p>
+							 <p class="paragraf_text"><b>(Далее заполните поля формы внизу)</b></p>
+							
+                            <p class="paragraf_text">Для этого скажите улицу и номер дома, чтобы внести вас на карту. Ваш телефон. Как вас зовут. Спасибо!</p>
                         </div>
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"></span></button>
                     </div>
@@ -430,8 +430,40 @@ gitter = {
         </div>
     </div>
 </div>
+<div class="modal_mirtl-wrap modal_mirtl-wrap--active uniPopup" style="display: none;">
+    <div class="modal_mirtl modal_mirtl3" style="padding: 35px 20px 35px 20px;">
+        <div class="">
+            <div class="modal_mirtl__text">Ваша информация поможет нам победить.</div>
+        </div>
+        <div class="icon-close" onClick="$('.uniPopup').fadeOut(500);"></div>
+    </div>
+</div>
 
 <script type="text/javascript">
+
+
+$(document).ready(function(){
+		
+		
+	var text = '';
+	
+	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
+		 text = 'В браузере Сафари звонилка не работает :( <br/> Откройте другой браузер, пожалуйста.';
+		 
+	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))
+		 text = 'На айфонах звонилка не работает, к сожалению :(';
+		 
+	
+	
+	
+	 
+	
+	if (text != ''){
+		$('.uniPopup').find('.modal_mirtl__text').html(text);
+		$('.uniPopup').fadeIn();
+	}
+});
+
     $(function() {
       $('.button--tips').click( function(event) {
         event.stopPropagation();
