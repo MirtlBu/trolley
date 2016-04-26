@@ -35,7 +35,7 @@ p {
 .top {
   width: 100%;
   min-height: 200px;
-  background: url("../img/top-header.jpg") no-repeat center center;
+  background: url("../images/top-header.jpg") no-repeat center center;
   background-size: 100% auto;
   position: relative;
   overflow: hidden;
@@ -262,7 +262,7 @@ form .container_inner {
     top: -5px;
     width: 17px;
     height: 17px;
-    background-image: url(../img/icon-checkbox.png);
+    background-image: url(../images/icon-checkbox.png);
     display: none;
 }
 
