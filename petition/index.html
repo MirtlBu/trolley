@@ -19,20 +19,20 @@
 	<meta property="og:image:width" content="900" />
 	<meta property="og:image:height" content="605" />
 
-	
+
     <meta name="twitter:card" content="summary">  <!-- Тип окна -->
     <meta name="twitter:site" content="Троллейбус уничтожают!">
     <meta name="twitter:title" content="Троллейбус уничтожают!">
     <meta name="twitter:description" content="В&nbsp;мае Сергей Собянин планирует заменить все троллейбусы в&nbsp;центре Москвы на&nbsp;автобусы. Эти планы держатся в&nbsp;секрете, москвичей вводят в&nbsp;заблуждение тем, что отмена временная.">
     <meta name="twitter:image:src" content="http://podpishi.org/images/social_logo.jpg">
     <meta name="twitter:domain" content="http://podpishi.org/">
-	
-	
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/js/likely.js"></script>
 	<script type="text/javascript" src="/static/js/main.js"></script>
 	<script type="text/javascript" src="/static/js/sketch.min.js"></script>
-	
+
 	<style>
 		#sign_sketch {
 			border: 1px solid gray;
@@ -118,14 +118,13 @@
                                 <span class="petition__collapse text_link">Свернуть текст</span>
                             </div>
                             <div class="form__row">
-								<canvas id="sign_sketch" width="340" height="125"></canvas>
-                                <div class="petition__sign">
-                                    <div class="form__comment">
-                                        В этом окне просьба расписаться. <br />Без вашей подписи петиция не будет рассматриваться
-                                    </div>
+                                <div class="sign_wrap">
+                                    <canvas id="sign_sketch" width="340" height="125"></canvas>
                                     <div class="text_link">Очистить</div>
                                 </div>
-
+                                <div class="form__comment">
+                                    В этом окне просьба расписаться. <br />Без вашей подписи петиция не будет рассматриваться
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,25 +184,25 @@
             </div>
         </div>
     </div>
-		
+
 	<script>
 
 		petition = {
-			
+
 			init: function(){
 
 				$('#sign_sketch').sketch();
 
 			},
-			
+
 		};
-		
+
 		$(document).ready(function(){
 			petition.init();
 		});
 
 	</script>
-		
+
     <script type="text/javascript">
         $(function() {
             $('.petition__controls .text_link').on('click', function() {
