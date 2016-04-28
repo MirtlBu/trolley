@@ -20,6 +20,7 @@ input, textarea, button {
     border: none;
     outline: none;
     box-shadow: none;
+    font-family: 'PT Sans', sans-serif;
 }
 
 p {
@@ -172,6 +173,16 @@ form .container_inner {
     margin-top: 40px;
 }
 
+.petition__textarea {
+    width: 100%;
+    min-height: 580px;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+}
+
 .petition__text strong {
     display: block;
     text-align: center;
@@ -275,6 +286,10 @@ form .container_inner {
     flex-direction: column;
 }
 
+.petition__send {
+    text-align: center;
+}
+
 .subscribe {
     padding-bottom: 10px;
     margin-top: 25px;
@@ -321,10 +336,6 @@ form .container_inner {
     width: 225px;
 }
 
-.modal__button {
-    width: 100%;
-}
-
 .footer {
     padding: 30px 0;
     background-color: #f0f0f0;
@@ -368,6 +379,10 @@ form .container_inner {
     z-index: 8888;
 }
 
+.modal_wrap--hidden {
+    display: none;
+}
+
 .modal, .modal__text {
     position: absolute;
     top: 50%;
@@ -377,19 +392,61 @@ form .container_inner {
     padding: 20px;
     box-sizing: border-box;
     transform: translateY(-50%);
-    z-index: 9999;
 }
 
 .modal {
     width: 90%;
     height: 90%;
     background-color: #ebebeb;
+    z-index: 9999;
 }
 
 .modal__close {
     position: absolute;
     right: 20px;
     top: 20px;
+}
+
+.modal__text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.modal__text strong {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.modal__text p {
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.modal__button {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.controls_edit {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.edit__button {
+    width: 130px;
+    height: 32px;
+    margin: 10px 15px 0 0;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.send__button {
+    height: 58px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 568px) {
@@ -438,8 +495,19 @@ form .container_inner {
         margin-top: -18px;
     }
 
+    .modal__text {
+        padding: 75px;
+    }
+
     .modal__button {
         width: 265px;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+    .send__button {
+        width: 450px;
+        height: 51px;
     }
 }
 
@@ -582,6 +650,11 @@ form .container_inner {
     .modal {
         width: 600px;
         height: 520px;
+    }
+
+    .controls_edit {
+        float: left;
+        margin-top: -14px;
     }
 }
 
