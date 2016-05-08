@@ -25,11 +25,13 @@
 
     <div class="block1">
         <div class="container">
-            <div class="">
-                <img src="images/postcard_all.png" alt="Открытка с троллейбусом" width="828px" height="393px">
-            </div>
-            <div class="message">
-                <span>В знак благодарности за пожертвование на кампанию <br> «Москвичи за троллейбус» мы пришлем вам открытку</span>
+            <div class="centered">
+                <div class="">
+                    <img src="images/postcard_all.png" alt="Открытка с троллейбусом" width="828px" height="393px">
+                </div>
+                <div class="message">
+                    <span>В знак благодарности за пожертвование на кампанию <br> «Москвичи за троллейбус» мы пришлем вам открытку</span>
+                </div>
             </div>
             <form id="form1">
                 <div class="form1">
@@ -135,7 +137,7 @@
                             </label>
                             <input type="radio" name="destination" id="destination4">
                             <label for="destination4">
-                                <div class="flexbox__item">
+                                <div class="flexbox__item" id="other_dest">
                                     <div class="step__container">
                                         <div class="step__name">Другой адресат</div>
                                     </div>
@@ -178,14 +180,13 @@
         </form>
     </div>
     <div class="block3">
-        <div class="centered">
-            <div class="centered__table">
-                <div class="centered__row">
-                    <div class="centered__cell">
-                        <div class="message">
-                            <span>Открытка уже летит к адресату!</span>
-                        </div>
+        <div class="centered_table">
+            <div class="centered_row">
+                <div class="centered_cell">
+                    <div class="message">
+                        <span>Открытка уже летит к адресату!</span>
                     </div>
+                    <button class="button_another" type="button">Создать ещё одну открытку</button>
                 </div>
             </div>
         </div>
@@ -195,7 +196,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(function() {
-
+        $('.flexbox__item').on('click', function() {
+            if($(this).hasClass('flexbox__item--active')) {
+                $('.dropdown').removeClass('dropdown--visible');
+                return;
+            }
+            else {
+                $('.dropdown').removeClass('dropdown--visible');
+                $('.flexbox__item').removeClass('flexbox__item--active');
+                $(this).addClass('flexbox__item--active');
+                if($(this).attr('id') === "other_dest") {
+                    $('.dropdown').addClass('dropdown--visible');
+                }
+            }
+        });
     });
 </script>
 </body>
