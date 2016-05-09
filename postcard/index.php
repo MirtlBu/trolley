@@ -27,7 +27,7 @@
         <div class="container">
             <div class="centered">
                 <div class="postcards_all">
-                    <img src="images/postcard_all.png" alt="Открытка с троллейбусом" width="828px" height="370px">
+                    <img src="images/postcard_all.jpg" alt="Открытка с троллейбусом" width="828px" height="370px">
                 </div>
                 <div class="message">
                     <span>В знак благодарности за пожертвование на кампанию <br> «Москвичи за троллейбус» мы пришлем вам открытку</span>
@@ -67,35 +67,45 @@
                             <input type="radio" name="postcard" id="postcard1">
                             <label for="postcard1">
                                 <div class="flexbox__item">
-                                    <img src="images/postcard1.jpg" alt="Открытка с троллейбусом" width="280px" height="200px">
+                                    <div class="image_wrap">
+                                        <img src="images/postcard1.jpg" alt="Открытка с троллейбусом" width="278px" height="200px">
+                                    </div>
                                 </div>
                             </label>
 
                             <input type="radio" name="postcard" id="postcard2">
                             <label for="postcard2">
                                 <div class="flexbox__item flexbox__item--active">
-                                    <img src="images/postcard2.jpg" alt="Открытка с троллейбусом" width="280px" height="200px">
+                                    <div class="image_wrap">
+                                        <img src="images/postcard2.jpg" alt="Открытка с троллейбусом" width="278px" height="200px">
+                                    </div>
                                 </div>
                             </label>
 
                             <input type="radio" name="postcard" id="postcard3">
                             <label for="postcard3">
                                 <div class="flexbox__item">
-                                    <img src="images/postcard3.jpg" alt="Открытка с троллейбусом" width="280px" height="200px">
+                                    <div class="image_wrap">
+                                        <img src="images/postcard3.jpg" alt="Открытка с троллейбусом" width="278px" height="200px">
+                                    </div>
                                 </div>
                             </label>
 
                             <input type="radio" name="postcard" id="postcard4">
                             <label for="postcard4">
                                 <div class="flexbox__item">
-                                    <img src="images/postcard1.jpg" alt="Открытка с троллейбусом" width="280px" height="200px">
+                                    <div class="image_wrap">
+                                        <img src="images/postcard4.jpg" alt="Открытка с троллейбусом" width="278px" height="200px">
+                                    </div>
                                 </div>
                             </label>
 
                             <input type="radio" name="postcard" id="postcard5">
                             <label for="postcard5">
                                 <div class="flexbox__item">
-                                    <img src="images/postcard2.jpg" alt="Открытка с троллейбусом" width="280px" height="200px">
+                                    <div class="image_wrap">
+                                        <img src="images/postcard5.jpg" alt="Открытка с троллейбусом" width="278px" height="200px">
+                                    </div>
                                 </div>
                             </label>
                         </div>
@@ -142,13 +152,13 @@
                                         <div class="step__name">Другой адресат</div>
                                     </div>
                                 </div>
+                                <div class="dropdown_wrap">
+                                    <div class="dropdown">
+                                        <div class="dropdown__tail"></div>
+                                        <textarea class="form__textarea form2__textarea" name="address" placeholder="Индекс, населенный пункт, улица, квартира"></textarea>
+                                    </div>
+                                </div>
                             </label>
-                        </div>
-                        <div class="dropdown_wrap">
-                            <div class="dropdown">
-                                <div class="dropdown__tail"></div>
-                                <textarea class="form__textarea form2__textarea" name="address" placeholder="Индекс, населенный пункт, улица, квартира"></textarea>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,10 +212,12 @@
                 return;
             }
             else {
+                $('.dropdown').removeClass('other_dest');
                 $('.dropdown').removeClass('dropdown--visible');
                 $('.flexbox__item').removeClass('flexbox__item--active');
                 $(this).addClass('flexbox__item--active');
                 if($(this).attr('id') === "other_dest") {
+                    $(this).addClass('other_dest');
                     $('.dropdown').addClass('dropdown--visible');
                 }
             }
