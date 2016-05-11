@@ -28,7 +28,8 @@
     <meta name="twitter:image:src" content="https://podpishi.org/static/images/social_logo.png">
     <meta name="twitter:domain" content="https://podpishi.org/">
 
-
+    <script src="static/js/likely.js"></script>
+    <link rel="stylesheet" href="static/css/likely.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://podpishi.org/static/js/likely.js"></script>
 	<script type="text/javascript" src="https://podpishi.org/static/js/main.js"></script>
@@ -99,17 +100,28 @@
     </div>
     <div class="slogan2">
         <div class="container">
-            <h2>Подпишите обращение</h2>
+            <h2>Подпишите петицию</h2>
         </div>
     </div>
     <div class="petition">
         <form onsubmit="return false;">
             <div class="container">
+                <div class="petition_nav">
+                    <div class="petition_nav__item petition_nav__item--active">
+                        <span class="text_link">Президенту</span>
+                    </div>
+                    <div class="petition_nav__item petition_nav__item--checked">
+                        <span class="text_link">Мэру Москвы</span>
+                    </div>
+                    <div class="petition_nav__item">
+                        <span class="text_link">Депутату МГД</span>
+                    </div>
+                </div>
                 <div class="petition__paper">
                     <div class="container_inner">
                         <div class="form__block">
                             <div class="whom">
-                                Мэру Москвы <br />С. С. Собянину <br/>
+                                Мэру Москвы <br />С. С. Собянину <br/>от гражданина
                             </div>
                             <div class="form__row">
                                 <div class="before-input">от</div><input class="form__input ajax_arg" name="name" placeholder="Булгакова Михаила Афанасьевича" type="text">
@@ -229,6 +241,16 @@
             </div>
         </form>
     </div>
+    <div class="social">
+        <div class="container">
+            <div class="social__title">Расскажите друзьям</div>
+            <div class="likely">
+              <div class="twitter">Твитнуть</div>
+              <div class="facebook">Поделиться</div>
+              <div class="vkontakte">Поделиться</div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="container">
             <div class="flexbox">
@@ -270,7 +292,18 @@
         </div>
     </div>
 
-    <div class="modal_wrap mosgorduma_added none_added" style="display: none;">
+    <div class="top_popup">
+        <div class="top_popup_text">
+            <strong>Спасибо!</strong>
+            <p>Обращение в мэрию отправлено. Мы его распечатаем и&nbsp;доставим в&nbsp;мэрию в&nbsp;течении двух дней, дальше в&nbsp;течении 30 дней вам придёт официальный&nbsp;ответ.</p>
+            <p>Теперь подпишите, пожалуйста, обращение Президенту, оно ниже.</p>
+        </div>
+        <div class="top_popup__close">
+            <span class="text_link">Закрыть</span>
+        </div>
+    </div>
+
+<!--     <div class="modal_wrap mosgorduma_added none_added" style="display: none;">
         <div class="modal">
             <div class="modal__text">
                 <strong>Спасибо!</strong>
@@ -285,7 +318,7 @@
                 <div class="text_link" onCLick="$(this).closest('.modal_wrap').fadeOut();">Закрыть</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 	<script>
 
@@ -557,6 +590,20 @@
                 var windowWidth = $(window).width();
                 $('.top').css('height', windowWidth/1.75);
             }
+
+            $('.petition_nav__item').on('click', function() {
+                if($(this).hasClass('petition_nav__item--active')) {
+                    return;
+                }
+                else {
+                    $('.petition_nav__item').removeClass('petition_nav__item--active');
+                    $(this).addClass('petition_nav__item--active');
+                }
+            });
+
+            $('.top_popup__close').on('click', function() {
+                $(this).closest('.top_popup').css('display', 'none');
+            });
 
         })
     </script>
