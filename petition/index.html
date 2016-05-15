@@ -62,12 +62,12 @@
 		}
 
 
-		@media screen and (min-width: 1000px){
+		/*@media screen and (min-width: 1000px){
 			.slogan1 {
 				position: relative;
 				top: -540px;
 			}
-		}
+		}*/
 
 		@media screen and (min-height: 800px){
 			.slogan1 h1 {
@@ -573,23 +573,35 @@
             });
 
 
+            // $(window).resize( function () {
+            //     resizeTriangle();
+            //     resizeTop()
+            // });
+            // resizeTriangle();
+            // resizeTop()
+
+            // function resizeTriangle () {
+            //     $('.triangle').each(function () {
+            //         var width = ($(this).parent().width());
+            //         $(this).css('border-left-width', width).css('border-bottom-width', width/9);
+            //     });
+            // }
+
+            // function resizeTop() {
+            //     var windowWidth = $(window).width();
+            //     $('.top').css('height', windowWidth/1.75);
+            // }
+
             $(window).resize( function () {
                 resizeTriangle();
-                resizeTop()
             });
             resizeTriangle();
-            resizeTop()
 
             function resizeTriangle () {
                 $('.triangle').each(function () {
-                    var width = ($(this).parent().width());
-                    $(this).css('border-left-width', width).css('border-bottom-width', width/9);
+                    var width = $(this).parent().width();
+                    $(this).css('border-left-width',width);
                 });
-            }
-
-            function resizeTop() {
-                var windowWidth = $(window).width();
-                $('.top').css('height', windowWidth/1.75);
             }
 
             $('.petition_nav__item').on('click', function() {

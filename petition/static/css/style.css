@@ -38,19 +38,18 @@ p {
 
 .top {
     width: 100%;
-    min-height: 180px;
-    background: url("../images/top-header.jpg") no-repeat center 65%;
+    min-height: 265px;
+    background: url("../images/top-header.jpg") no-repeat center center;
     background-size: 100% auto;
     position: relative;
-}
-
-.top .container {
-    height: 100%;
+    padding: 25px 0;
+    padding-bottom: 33%;
+    box-sizing: border-box;
 }
 
 .wrote {
     position: absolute;
-    bottom: 0;
+    top: 114px;
     right: 30px;
     width: 107px;
     padding: 10px;
@@ -79,17 +78,19 @@ p {
     font-size: 14px;
 }
 
+.wrote .text_link:hover {
+    border: none;
+}
+
 .triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 138px solid #ffffff;
+    border-left: 1px solid transparent;
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0;
-    height: 0;
-    border-bottom-style: solid;
     border-bottom-color: #ffffff;
-    border-bottom-width: 45px;
-    border-left: 1px solid transparent;
-
 }
 
 .slogan1 {
@@ -586,6 +587,10 @@ form .container_inner {
 
 @media screen and (min-width: 568px) {
 
+    .top {
+        min-height: 375px;
+    }
+
     .form__block {
         width: 235px;
         display: inline-block;
@@ -593,6 +598,7 @@ form .container_inner {
     }
 
     .wrote {
+        top: 208px;
         width: 190px;
         font-size: 20px;
         line-height: 19px;
@@ -711,7 +717,7 @@ form .container_inner {
 @media screen and (min-width: 1000px) {
 
     .top {
-        max-height: 570px;
+        min-height: 545px;
     }
 
     .container, form .container {
@@ -748,7 +754,8 @@ form .container_inner {
     }
 
     .wrote {
-        bottom: 40px;
+        top: 350px;
+        right: 55px;
     }
 
     .wrap {
@@ -846,6 +853,23 @@ form .container_inner {
 
     .top_popup {
         width: 600px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .top {
+        min-height: 745px;
+    }
+
+    .slogan1 {
+        position: relative;
+        top: -700px;
+        left: 0;
+    }
+
+    .wrote {
+        top: 550px;
     }
 }
 
